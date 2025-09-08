@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_community"
+    tools:context=".ui.community.CommunityActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="7dp"
+        android:contentDescription="@string/logo_back"
+        android:src="@drawable/logo_back"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"> <!-- Penting untuk scroll saat keyboard muncul -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="280dp"
+                android:layout_marginBottom="8dp"
+                android:text="Post to forum"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <!-- Send Button -->
+
+            <EditText
+                android:id="@+id/etPostToForum"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/logo_inputfield"
+                android:gravity="top|start"
+                android:hint="Write your post here..."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/rounded_container"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="Send"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/asset_community" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:background="#FFFFFF"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    >
+
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/home"
+            android:src="@drawable/logo_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- News -->
+    <LinearLayout
+        android:id="@+id/nav_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/news"
+            android:src="@drawable/logo_news" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/news"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Center Logo -->
+
+    <!-- Community -->
+    <!-- Center Logo -->
+    <FrameLayout
+        android:id="@+id/nav_logo_container"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <!-- Circular Background -->
+        <View
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/logo_circle" />
+
+        <!-- Guardu Logo -->
+        <ImageView
+            android:id="@+id/nav_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/guardu"
+            android:src="@drawable/logo_guardu" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_community"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/community"
+            android:src="@drawable/logo_community" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/community"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Me -->
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/logo_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/profile"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

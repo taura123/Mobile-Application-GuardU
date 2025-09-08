@@ -1,0 +1,28 @@
+[versions]
+# Versi untuk plugin dan dependensi
+agp = "8.7.2"                 # Android Gradle Plugin
+kotlin = "1.9.24"             # Kotlin Plugin
+coreKtx = "1.15.0"            # Android Core KTX
+junit = "4.13.2"              # JUnit untuk pengujian
+junitVersion = "1.2.1"        # AndroidX JUnit versi
+espressoCore = "3.6.1"        # Espresso Core untuk pengujian UI
+appcompat = "1.6.1"           # AndroidX AppCompat
+material = "1.10.0"           # Material Components
+activity = "1.9.3"            # AndroidX Activity
+constraintlayout = "2.1.4"    # AndroidX ConstraintLayout
+
+[libraries]
+# Pustaka dan versi terkait
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+# Plugin untuk proyek
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

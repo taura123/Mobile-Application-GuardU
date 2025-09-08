@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="titleText1" type="id" />
+    <item name="subtitleText1" type="id" />
+    <item name="illustration1" type="id" />
+    <item name="sosButtonContainer1" type="id" />
+    <item name="sosButtonText1" type="id" />
+    <item name="emergencyOptionsContainer1" type="id" />
+    <item name="btnNonVerbal1" type="id" />
+    <item name="btnVerbal1" type="id" />
+    <item name="btnCyberBullying1" type="id" />
+</resources>

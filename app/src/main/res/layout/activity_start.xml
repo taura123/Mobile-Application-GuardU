@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.start.StartActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/logo_image"
+        app:layout_constraintEnd_toEndOf="@+id/logo_image"
+        app:layout_constraintStart_toStartOf="@+id/logo_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.398" />
+
+    <TextView
+        android:id="@+id/app_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/logo_image"
+        app:layout_constraintEnd_toEndOf="@+id/welcome_text"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/welcome_text"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo_guardu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/getstarted"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/get_started"
+        app:backgroundTint="#2A3663"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/copyright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/logo_image"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/already"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/already_have_an"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toEndOf="@+id/getstarted"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/account_login"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/already"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="@+id/already"
+        app:layout_constraintTop_toTopOf="@+id/already"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="267dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="@+id/getstarted"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.76" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

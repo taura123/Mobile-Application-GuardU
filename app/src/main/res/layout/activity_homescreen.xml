@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_homescreen"
+    tools:context=".ui.homescreen.HomescreenActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_container"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/rounded_container"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Text "Hello," -->
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Hello"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Text "Hi Taura" -->
+        <TextView
+            android:id="@+id/hi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/hi_taura"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hello_text" />
+
+        <!-- Image Icon -->
+        <ImageView
+            android:id="@+id/icon_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+
+            android:contentDescription="@string/icon"
+            android:src="@drawable/logo_profile1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Menu -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Container untuk seluruh konten -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Mood Section -->
+            <TextView
+                android:id="@+id/tvMoodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_marginStart="90dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/how_s_your_mood_today"
+                android:textColor="#6D6A6A"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/llMoodIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Not Happy -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivNotHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/not_happy"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_sadface" />
+
+                    <TextView
+                        android:id="@+id/tvNotHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_happy"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Neutral -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:contentDescription="@string/neutral"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_neutralface" />
+
+                    <TextView
+                        android:id="@+id/tvNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/neutral"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Happy -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:contentDescription="@string/happy"
+                        android:padding="2dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_happyface" />
+
+                    <TextView
+                        android:id="@+id/tvHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/happy"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Make a Report Section -->
+            <LinearLayout
+                android:id="@+id/llMakeReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rounded_container1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvReportInstruction"
+                    android:layout_width="294dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/make_a_report_nthis_report_will_be_sent_immediately_to_important_parties_please_do_not_make_false_reports_and_if_it_is_an_emergency_please_press_the_emergency_button_immediately"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/uploadreport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/upload_report"
+                    android:src="@drawable/logo_uploadreport"/>
+
+            </LinearLayout>
+
+            <!-- Bottom Menu -->
+            <LinearLayout
+                android:id="@+id/llBottomMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_container1"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="24dp"
+                android:elevation="4dp">
+
+                <!-- Community Button -->
+                <LinearLayout
+                    android:id="@+id/llcommunitybutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/community"
+                        android:padding="3dp"
+                        android:src="@drawable/logo_comm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:text="@string/community"
+                        android:textColor="#2A3663"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Report Status Button -->
+                <LinearLayout
+                    android:id="@+id/llreportstatusbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/report_status"
+                        android:padding="3dp"
+                        android:src="@drawable/logo_reportstatus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:text="@string/report_status"
+                        android:textColor="#2A3663"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- News Button -->
+                <LinearLayout
+                    android:id="@+id/llnewsbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/news"
+                        android:padding="3dp"
+                        android:src="@drawable/logo_newss" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:text="@string/news"
+                        android:textColor="#2A3663"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="#6D6A6A"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <!-- ASK KOJO Button -->
+             <ImageView
+                 android:id="@+id/btnAskKojo"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="16dp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="16dp"
+                 android:contentDescription="@string/chatbot"
+                 android:src="@drawable/button_chatbot"/>
+
+                <!-- Latest News Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- Latest News Title -->
+                    <TextView
+                        android:id="@+id/tvLatestNewsTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/newss"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- See All with Arrow -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/tvSeeAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/see_all"
+                            android:textColor="#4C9FFB"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="4dp" />
+
+                        <ImageView
+                            android:id="@+id/ivArrow"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@string/arrow"
+                            android:src="@drawable/logo_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- News Image Centered -->
+                    <ImageView
+                        android:id="@+id/ivNewsImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="6dp"
+                        android:contentDescription="@string/news"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/news1" />
+                </LinearLayout>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="25dp"
+                android:background="#6D6A6A"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+                <!-- Introduction GuardU App Section -->
+                <TextView
+                    android:id="@+id/tvIntroductionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/introduction_guardu_app"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E9ECCB"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivIntroductionVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:contentDescription="@string/vidtutorial"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo_video" />
+
+
+                </LinearLayout>
+
+                <!-- FAQ Button -->
+                <ImageView
+                    android:id="@+id/btnFAQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/faq"
+                    android:src="@drawable/button_faq"
+                    android:paddingVertical="16dp"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/home"
+                android:src="@drawable/logo_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- News -->
+        <LinearLayout
+            android:id="@+id/nav_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/news"
+                android:src="@drawable/logo_news" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/news"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Center Logo -->
+
+        <!-- Community -->
+        <!-- Center Logo -->
+        <FrameLayout
+            android:id="@+id/nav_logo_container"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <!-- Circular Background -->
+            <View
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/logo_circle" />
+
+            <!-- Guardu Logo -->
+            <ImageView
+                android:id="@+id/nav_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/guardu"
+                android:src="@drawable/logo_guardu" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_community"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/community"
+                android:src="@drawable/logo_community" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/community"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Me -->
+        <LinearLayout
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/profile"
+                android:src="@drawable/logo_profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

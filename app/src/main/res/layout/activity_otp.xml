@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_number"
+    tools:context=".ui.signup.OtpActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/verify_mobile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/verify"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/otp_desc_text"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, eget erat bibendum in magna pretium rhoncus ut +620895166500903."
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_mobile_text"
+        tools:ignore="HardcodedText" />
+
+    <!-- OTP Input -->
+    <LinearLayout
+        android:id="@+id/otp_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_desc_text">
+
+        <!-- OTP Button Field 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_button_1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/logo_inputfield"
+            android:gravity="center"
+            android:hint="_"
+            app:backgroundTint="#FFFFFF"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="HardcodedText" />
+
+        <!-- OTP Button Field 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_button_2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/logo_inputfield"
+            android:gravity="center"
+            android:hint="_"
+            app:backgroundTint="#FFFFFF"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="HardcodedText" />
+
+        <!-- OTP Button Field 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_button_3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/logo_inputfield"
+            android:gravity="center"
+            android:hint="_"
+            app:backgroundTint="#FFFFFF"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="HardcodedText" />
+
+        <!-- OTP Button Field 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_button_4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/logo_inputfield"
+            android:gravity="center"
+            android:hint="_"
+            app:backgroundTint="#FFFFFF"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <!-- Resend Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/resend_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/resend"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#2A3663"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_container" />
+
+    <!-- Confirm Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirm_button"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/confirm"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#2A3663"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_button" />
+
+    <!-- Edit Number Link -->
+    <TextView
+        android:id="@+id/edit_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/incorrect_mobile_number_edit_now"
+        android:textColor="#000080"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

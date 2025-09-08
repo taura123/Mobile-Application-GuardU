@@ -1,0 +1,270 @@
+<RelativeLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F1E4">
+
+  <!-- Konten Utama -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+
+      android:padding="16dp">
+
+    <!-- Back Icon -->
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="start"
+        android:contentDescription="@string/back"
+        android:src="@drawable/logo_back" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/your_profile"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Profile Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#2A3663"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <!-- Profile Icon -->
+      <ImageView
+          android:id="@+id/profileIcon"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:layout_gravity="center"
+          android:contentDescription="@string/profile_icon"
+          android:src="@drawable/asset_pp" />
+
+      <!-- Greeting -->
+      <TextView
+          android:id="@+id/greeting"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:text="@string/hi_taura"
+          android:textColor="#FFFFFF"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+      <!-- Buttons -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:orientation="vertical">
+
+        <!-- Your Profile Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_container2"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+          <ImageView
+              android:id="@+id/yourProfileIcon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:contentDescription="@string/your_profile_icon"
+              android:src="@drawable/logo_profile2" />
+
+          <TextView
+              android:id="@+id/yourProfileText"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_weight="1"
+              android:text="@string/your_profile"
+              android:textColor="#000000"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_container2"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+          <ImageView
+              android:id="@+id/settingsIcon"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:contentDescription="@string/settings_icon"
+              android:src="@drawable/logo_setting" />
+
+          <TextView
+              android:id="@+id/settingsText"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+              android:layout_weight="1"
+              android:text="@string/settings"
+              android:textColor="#000000"
+              android:textSize="16sp" />
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#8B0000"
+        android:text="@string/log_out"
+        android:textColor="#FFFFFF" />
+  </LinearLayout>
+
+  <!-- Bottom Navigation Bar -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_alignParentBottom="true"
+      android:background="#FFFFFF"
+      android:baselineAligned="false"
+      android:orientation="horizontal"
+      android:gravity="center">
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+      <ImageView
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/logo_home"
+          android:contentDescription="@string/home" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/home"
+          android:textSize="12sp"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- News -->
+    <LinearLayout
+        android:id="@+id/nav_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+      <ImageView
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/logo_news"
+          android:contentDescription="@string/news" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/news"
+          android:textSize="12sp"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Logo -->
+    <FrameLayout
+        android:id="@+id/nav_logo_container"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+      <View
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:background="@drawable/logo_circle" />
+
+      <ImageView
+          android:id="@+id/nav_logo"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:src="@drawable/logo_guardu"
+          android:contentDescription="@string/logo" />
+    </FrameLayout>
+
+    <!-- Community -->
+    <LinearLayout
+        android:id="@+id/nav_community"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+      <ImageView
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/logo_community"
+          android:contentDescription="@string/community" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/community"
+          android:textSize="12sp"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Profile -->
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+      <ImageView
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/logo_profile"
+          android:contentDescription="@string/profile" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/profile"
+          android:textSize="12sp"
+          android:textColor="#000000" />
+    </LinearLayout>
+  </LinearLayout>
+</RelativeLayout>

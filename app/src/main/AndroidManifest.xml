@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GuardU"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.uploadreport.UploadreportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.emergencybutton.Emergency2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.emergencybutton.EmergencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.news.News1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.news.NewsActivity"
+            android:exported="false" /> <!-- Main Launcher Activity -->
+        <activity
+            android:name=".ui.start.StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other Activities -->
+        <activity
+            android:name=".ui.community.CommunityActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.chatbot.ChatbotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.reportstatus.ReportstatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.homescreen.HomescreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.NumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.Onboard3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.Onboard2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.onboarding.Onboard1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgchatbot"
+    tools:context=".ui.chatbot.ChatbotActivity">
+
+    <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:background="#FFFFFF"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    >
+
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/home"
+            android:src="@drawable/logo_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- News -->
+    <LinearLayout
+        android:id="@+id/nav_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/news"
+            android:src="@drawable/logo_news" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/news"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Center Logo -->
+
+    <!-- Community -->
+    <!-- Center Logo -->
+    <FrameLayout
+        android:id="@+id/nav_logo_container"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <!-- Circular Background -->
+        <View
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/logo_circle" />
+
+        <!-- Guardu Logo -->
+        <ImageView
+            android:id="@+id/nav_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/guardu"
+            android:src="@drawable/logo_guardu" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_community"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/community"
+            android:src="@drawable/logo_community" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/community"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Me -->
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/logo_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/profile"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/logo_back"
+        android:src="@drawable/logo_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:text="@string/kojo"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:shadowColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Button 1 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button1"
+        android:layout_width="335dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/message1"
+        android:textColor="#000000"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button2"
+        android:layout_width="335dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/button1"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/massage2"
+        android:textColor="#000000"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button3"
+        android:layout_width="335dp"
+        android:layout_height="@dimen/_90dp"
+        android:layout_below="@id/button2"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/massage3"
+        android:textColor="#000000"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+    <LinearLayout
+        android:id="@+id/message_container"
+        android:layout_width="335dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/logo_inputfield"
+        android:orientation="horizontal"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Input Text -->
+
+        <!-- Send Button -->
+
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/inputfiel_bot"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/inputfiel_bot"
+            android:src="@drawable/logo_send" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

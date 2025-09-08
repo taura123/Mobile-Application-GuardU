@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_number"
+    tools:context=".ui.signup.NumberActivity">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/mobile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/mobile_number"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Deskripsi -->
+    <TextView
+        android:id="@+id/numberdesc_text"
+        android:layout_width="335dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:text="To ensure the security of your account and to proceed further, please input your phone number and verify it. Verification is required to confirm your identity and complete the process."
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_text"
+        tools:ignore="HardcodedText" />
+
+
+
+    <Spinner
+        android:id="@+id/country_spinner"
+        android:layout_width="330dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/logo_inputfield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numberdesc_text" />
+
+    <EditText
+        android:id="@+id/mobile_number"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/logo_inputfield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country_spinner"
+        android:layout_marginHorizontal="16dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton2"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="@string/send_otp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_number"
+        app:backgroundTint="#2A3663"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
